@@ -1,0 +1,657 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPN Samantel | سرویس‌های V2Ray امن و پرسرعت</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+        }
+        .feature-icon {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+        }
+        .telegram-banner {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .telegram-icon {
+            fill: #0088cc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold">VPN<span class="text-yellow-300">Samantel</span></div>
+            </div>
+            <nav class="hidden md:flex space-x-1 space-x-reverse">
+                <a href="#features" class="px-3 py-2 rounded hover:bg-white hover:bg-opacity-20 transition">ویژگی‌ها</a>
+                <a href="#plans" class="px-3 py-2 rounded hover:bg-white hover:bg-opacity-20 transition">پلن‌ها</a>
+                <a href="#faq" class="px-3 py-2 rounded hover:bg-white hover:bg-opacity-20 transition">سوالات متداول</a>
+                <a href="#contact" class="px-3 py-2 rounded hover:bg-white hover:bg-opacity-20 transition">تماس با ما</a>
+                <a href="https://t.me/vpnsamantel" target="_blank" class="px-3 py-2 rounded bg-yellow-400 text-indigo-800 hover:bg-yellow-300 transition flex items-center">
+                    <svg class="h-5 w-5 ml-1" viewBox="0 0 24 24" fill="#0088cc">
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm-2.5 14.5l7.5-7.5-1.5-1.5-6 6-3-3-1.5 1.5 4.5 4.5z"/>
+                    </svg>
+                    کانال تلگرام
+                </a>
+            </nav>
+            <button class="md:hidden text-2xl">☰</button>
+        </div>
+    </header>
+
+    <!-- Telegram Banner -->
+    <div class="bg-blue-50 border-b border-blue-100">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-center telegram-banner">
+                <svg class="h-6 w-6 ml-2 telegram-icon" viewBox="0 0 24 24">
+                    <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                </svg>
+                <span class="font-bold">برای اطلاع از آخرین تخفیف‌ها و اخبار به کانال تلگرام ما بپیوندید:</span>
+                <a href="https://t.me/vpnsamantel" target="_blank" class="mr-2 text-blue-600 font-bold hover:underline">@vpnsamantel</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">سرویس V2Ray با بالاترین کیفیت</h1>
+                    <p class="text-xl mb-8">دسترسی امن، سریع و بدون محدودیت به اینترنت با سرورهای اختصاصی VPN Samantel</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://t.me/vpnsamantel" target="_blank" class="bg-white text-indigo-700 px-6 py-3 rounded-lg font-medium hover:bg-yellow-300 transition shadow-lg flex items-center">
+                            <svg class="h-5 w-5 ml-2" viewBox="0 0 24 24" fill="#0088cc">
+                                <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                            </svg>
+                            عضویت در کانال تلگرام
+                        </a>
+                        <a href="#plans" class="bg-transparent border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:bg-opacity-20 transition">مشاهده پلن‌ها</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white bg-opacity-10 p-6 rounded-xl shadow-2xl relative">
+                        <div class="absolute -top-4 -right-4 bg-yellow-400 text-indigo-800 px-4 py-2 rounded-lg font-bold shadow-lg">
+                            <div class="flex items-center">
+                                <svg class="h-5 w-5 ml-1" viewBox="0 0 24 24" fill="#0088cc">
+                                    <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                                </svg>
+                                کانال تلگرام ما
+                            </div>
+                        </div>
+                        <svg class="w-full" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="50" y="50" width="300" height="200" rx="10" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-width="2"/>
+                            <circle cx="200" cy="150" r="70" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-width="2"/>
+                            <path d="M160 150 L190 170 L240 120" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round"/>
+                            <path d="M50 80 L350 80" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1"/>
+                            <circle cx="65" cy="65" r="5" fill="#ff5f57"/>
+                            <circle cx="85" cy="65" r="5" fill="#febc2e"/>
+                            <circle cx="105" cy="65" r="5" fill="#28c840"/>
+                            <rect x="70" y="100" width="260" height="20" rx="5" fill="#ffffff" fill-opacity="0.1"/>
+                            <rect x="70" y="130" width="100" height="10" rx="5" fill="#ffffff" fill-opacity="0.1"/>
+                            <rect x="70" y="150" width="80" height="10" rx="5" fill="#ffffff" fill-opacity="0.1"/>
+                            <rect x="70" y="170" width="120" height="10" rx="5" fill="#ffffff" fill-opacity="0.1"/>
+                            <rect x="70" y="190" width="90" height="10" rx="5" fill="#ffffff" fill-opacity="0.1"/>
+                            <rect x="70" y="210" width="110" height="10" rx="5" fill="#ffffff" fill-opacity="0.1"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telegram CTA -->
+    <section class="py-8 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <svg class="h-10 w-10 ml-3" viewBox="0 0 24 24" fill="white">
+                        <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                    </svg>
+                    <div>
+                        <h3 class="text-xl font-bold">به کانال تلگرام ما بپیوندید</h3>
+                        <p>برای دریافت آخرین اخبار، تخفیف‌ها و آموزش‌های کاربردی</p>
+                    </div>
+                </div>
+                <a href="https://t.me/vpnsamantel" target="_blank" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition shadow-lg flex items-center">
+                    <svg class="h-5 w-5 ml-2" viewBox="0 0 24 24" fill="#0088cc">
+                        <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                    </svg>
+                    عضویت در کانال
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">چرا سرویس V2Ray ما را انتخاب کنید؟</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="text-4xl feature-icon mb-4">🚀</div>
+                    <h3 class="text-xl font-bold mb-2">سرعت فوق‌العاده</h3>
+                    <p class="text-gray-600">سرورهای اختصاصی با پهنای باند نامحدود و سرعت بالا برای استفاده بدون وقفه</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="text-4xl feature-icon mb-4">🔒</div>
+                    <h3 class="text-xl font-bold mb-2">امنیت پیشرفته</h3>
+                    <p class="text-gray-600">رمزنگاری قوی و پروتکل‌های امنیتی پیشرفته برای حفظ حریم خصوصی شما</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="text-4xl feature-icon mb-4">🌐</div>
+                    <h3 class="text-xl font-bold mb-2">دسترسی جهانی</h3>
+                    <p class="text-gray-600">دسترسی به تمام سایت‌ها و سرویس‌های آنلاین بدون محدودیت جغرافیایی</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="text-4xl feature-icon mb-4">💻</div>
+                    <h3 class="text-xl font-bold mb-2">سازگار با همه دستگاه‌ها</h3>
+                    <p class="text-gray-600">قابل استفاده روی ویندوز، مک، لینوکس، اندروید و iOS</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="text-4xl feature-icon mb-4">⚡</div>
+                    <h3 class="text-xl font-bold mb-2">راه‌اندازی سریع</h3>
+                    <p class="text-gray-600">تنها در چند دقیقه سرویس خود را دریافت کنید و استفاده را شروع کنید</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="text-4xl feature-icon mb-4">🛡️</div>
+                    <h3 class="text-xl font-bold mb-2">پشتیبانی ۲۴/۷</h3>
+                    <p class="text-gray-600">تیم پشتیبانی ما همیشه آماده کمک به شما در هر زمان است</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section id="plans" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">پلن‌های اشتراک</h2>
+            <p class="text-center text-gray-600 mb-12">پلن مناسب خود را انتخاب کنید</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 card-hover">
+                    <div class="p-6 bg-blue-50">
+                        <h3 class="text-xl font-bold text-center">پلن پایه</h3>
+                        <div class="text-center my-4">
+                            <span class="text-4xl font-bold text-indigo-600">۱۵۰,۰۰۰</span>
+                            <span class="text-gray-600"> تومان / ماهانه</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <svg class="h-5 w-5 text-green-500 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>ترافیک ۵۰ گیگابایت</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-5 w-5 text-green-500 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>سرعت تا ۵۰ مگابیت</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-5 w-5 text-green-500 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>۱ کاربر همزمان</span>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <svg class="h-5 w-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                                <span>پشتیبانی اولویت‌دار</span>
+                            </li>
+                        </ul>
+                        <button class="w-full mt-6 bg-indigo-600 text-white py-3 rounded-lg font-medium hover:bg-indigo-700 transition flex items-center justify-center" onclick="showPurchaseModal()">
+                            <svg class="h-5 w-5 ml-2" viewBox="0 0 24 24" fill="white">
+                                <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                            </svg>
+                            خرید اشتراک
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Standard Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform scale-105 border-2 border-indigo-500 transition-all duration-300 card-hover">
+                    <div class="p-6 gradient-bg text-white">
+                        <div class="bg-yellow-400 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full w-max mx-auto mb-2">پیشنهاد ویژه</div>
+                        <h3 class="text-xl font-bold text-center">پلن استاندارد</h3>
+                        <div class="text-center my-4">
+                            <span class="text-4xl font-bold">۲۵۰,۰۰۰</span>
+                            <span> تومان / ماهانه</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <svg class="h-5 w-5 text-green-500 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>ترافیک ۱۰۰ گیگابایت</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-5 w-5 text-green-500 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>سرعت تا ۱۰۰ مگابیت</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-5 w-5 text-green-500 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>۲ کاربر همزمان</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-5 w-5 text-green-500 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>پشتیبانی اولویت‌دار</span>
+                            </li>
+                        </ul>
+                        <button class="w-full mt-6 gradient-bg text-white py-3 rounded-lg font-medium hover:opacity-90 transition flex items-center justify-center" onclick="showPurchaseModal()">
+                            <svg class="h-5 w-5 ml-2" viewBox="0 0 24 24" fill="white">
+                                <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                            </svg>
+                            خرید اشتراک
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Premium Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 card-hover">
+                    <div class="p-6 bg-purple-50">
+                        <h3 class="text-xl font-bold text-center">پلن حرفه‌ای</h3>
+                        <div class="text-center my-4">
+                            <span class="text-4xl font-bold text-indigo-600">۴۰۰,۰۰۰</span>
+                            <span class="text-gray-600"> تومان / ماهانه</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <svg class="h-5 w-5 text-green-500 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>ترافیک ۲۰۰ گیگابایت</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-5 w-5 text-green-500 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>سرعت نامحدود</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-5 w-5 text-green-500 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>۵ کاربر همزمان</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-5 w-5 text-green-500 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>پشتیبانی اختصاصی ۲۴/۷</span>
+                            </li>
+                        </ul>
+                        <button class="w-full mt-6 bg-indigo-600 text-white py-3 rounded-lg font-medium hover:bg-indigo-700 transition flex items-center justify-center" onclick="showPurchaseModal()">
+                            <svg class="h-5 w-5 ml-2" viewBox="0 0 24 24" fill="white">
+                                <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                            </svg>
+                            خرید اشتراک
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Purchase Modal -->
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold">خرید اشتراک</h3>
+                <span class="text-2xl cursor-pointer" onclick="closePurchaseModal()">&times;</span>
+            </div>
+            <div class="p-4 bg-blue-50 rounded-lg mb-4 border border-blue-200">
+                <div class="flex items-center justify-center mb-4">
+                    <svg class="h-12 w-12 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                    </svg>
+                </div>
+                <p class="text-center font-bold text-lg mb-2">برای خرید اشتراک، لطفا در تلگرام به پیوی ادمین پیام دهید:</p>
+                <div class="flex flex-col items-center mt-4 space-y-3">
+                    <a href="https://t.me/chetchetam" target="_blank" class="flex items-center bg-blue-500 text-white px-4 py-3 rounded-lg hover:bg-blue-600 transition w-full justify-center">
+                        <svg class="h-6 w-6 ml-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                        </svg>
+                        @chetchetam
+                    </a>
+                    <p class="text-center font-bold">یا</p>
+                    <a href="https://t.me/mjerfani" target="_blank" class="flex items-center bg-blue-500 text-white px-4 py-3 rounded-lg hover:bg-blue-600 transition w-full justify-center">
+                        <svg class="h-6 w-6 ml-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                        </svg>
+                        @mjerfani
+                    </a>
+                </div>
+            </div>
+            <div class="text-center bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                <p class="font-bold mb-2">برای اطلاع از آخرین تخفیف‌ها و اخبار به کانال تلگرام ما بپیوندید:</p>
+                <a href="https://t.me/vpnsamantel" target="_blank" class="text-blue-600 hover:text-blue-800 transition font-bold flex items-center justify-center">
+                    <svg class="h-5 w-5 ml-1" viewBox="0 0 24 24" fill="#0088cc">
+                        <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                    </svg>
+                    @vpnsamantel
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- How it works -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">چگونه کار می‌کند؟</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 text-2xl font-bold mx-auto mb-4">۱</div>
+                    <h3 class="text-xl font-bold mb-2">انتخاب پلن</h3>
+                    <p class="text-gray-600">پلن مناسب خود را از بین گزینه‌های ما انتخاب کنید</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 text-2xl font-bold mx-auto mb-4">۲</div>
+                    <h3 class="text-xl font-bold mb-2">تماس با ما</h3>
+                    <p class="text-gray-600">از طریق تلگرام با ادمین‌های ما در ارتباط باشید</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 text-2xl font-bold mx-auto mb-4">۳</div>
+                    <h3 class="text-xl font-bold mb-2">دریافت اطلاعات</h3>
+                    <p class="text-gray-600">اطلاعات اتصال به سرور را بلافاصله دریافت کنید</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 text-2xl font-bold mx-auto mb-4">۴</div>
+                    <h3 class="text-xl font-bold mb-2">اتصال</h3>
+                    <p class="text-gray-600">با استفاده از نرم‌افزار V2Ray به سرور متصل شوید</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">سوالات متداول</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="flex justify-between items-center w-full p-6 text-right" onclick="toggleFAQ(this)">
+                        <svg class="h-5 w-5 text-indigo-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                        <span class="text-lg font-medium">V2Ray چیست؟</span>
+                    </button>
+                    <div class="hidden p-6 pt-0 text-gray-600 border-t">
+                        <p>V2Ray یک ابزار ارتباطی است که امکان دسترسی امن و بدون محدودیت به اینترنت را فراهم می‌کند. این سرویس با استفاده از پروتکل‌های پیشرفته، امنیت و حریم خصوصی کاربران را تضمین می‌کند.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="flex justify-between items-center w-full p-6 text-right" onclick="toggleFAQ(this)">
+                        <svg class="h-5 w-5 text-indigo-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                        <span class="text-lg font-medium">چگونه می‌توانم از V2Ray استفاده کنم؟</span>
+                    </button>
+                    <div class="hidden p-6 pt-0 text-gray-600 border-t">
+                        <p>پس از خرید اشتراک، اطلاعات اتصال را دریافت می‌کنید. سپس باید نرم‌افزار V2Ray را روی دستگاه خود نصب کرده و با استفاده از اطلاعات دریافتی به سرور متصل شوید. ما راهنمای کامل نصب و راه‌اندازی را برای تمام دستگاه‌ها در اختیار شما قرار می‌دهیم.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="flex justify-between items-center w-full p-6 text-right" onclick="toggleFAQ(this)">
+                        <svg class="h-5 w-5 text-indigo-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                        <span class="text-lg font-medium">آیا سرعت اینترنت من کاهش پیدا می‌کند؟</span>
+                    </button>
+                    <div class="hidden p-6 pt-0 text-gray-600 border-t">
+                        <p>سرورهای ما با پهنای باند بالا و بهینه‌سازی شده برای سرعت طراحی شده‌اند. در بیشتر موارد، کاهش سرعت قابل توجهی مشاهده نخواهید کرد. با این حال، سرعت نهایی به عوامل مختلفی مانند سرعت اینترنت اصلی شما، فاصله از سرور و بار شبکه بستگی دارد.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="flex justify-between items-center w-full p-6 text-right" onclick="toggleFAQ(this)">
+                        <svg class="h-5 w-5 text-indigo-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                        <span class="text-lg font-medium">روش‌های پرداخت چیست؟</span>
+                    </button>
+                    <div class="hidden p-6 pt-0 text-gray-600 border-t">
+                        <p>ما انواع روش‌های پرداخت از جمله کارت بانکی، پرداخت اینترنتی و ارزهای دیجیتال را پشتیبانی می‌کنیم. برای اطلاعات بیشتر با پشتیبانی ما در تلگرام تماس بگیرید.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="flex justify-between items-center w-full p-6 text-right" onclick="toggleFAQ(this)">
+                        <svg class="h-5 w-5 text-indigo-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                        <span class="text-lg font-medium">چگونه می‌توانم از آخرین اخبار و تخفیف‌ها مطلع شوم؟</span>
+                    </button>
+                    <div class="hidden p-6 pt-0 text-gray-600 border-t">
+                        <p>برای اطلاع از آخرین اخبار، تخفیف‌ها و آموزش‌های کاربردی، به کانال تلگرام ما بپیوندید: <a href="https://t.me/vpnsamantel" target="_blank" class="text-blue-600 font-bold">@vpnsamantel</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">تماس با ما</h2>
+            <div class="max-w-3xl mx-auto bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-6">
+                        <h3 class="text-xl font-bold mb-4">اطلاعات تماس</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <svg class="h-8 w-8 text-blue-500 ml-2" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                                </svg>
+                                <div>
+                                    <p class="font-bold">کانال تلگرام:</p>
+                                    <a href="https://t.me/vpnsamantel" target="_blank" class="text-blue-600 hover:text-blue-800">@vpnsamantel</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="h-8 w-8 text-blue-500 ml-2" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                                </svg>
+                                <div>
+                                    <p class="font-bold">پشتیبانی:</p>
+                                    <a href="https://t.me/chetchetam" target="_blank" class="text-blue-600 hover:text-blue-800 block">@chetchetam</a>
+                                    <a href="https://t.me/mjerfani" target="_blank" class="text-blue-600 hover:text-blue-800 block">@mjerfani</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="h-6 w-6 text-indigo-600 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-gray-600">ساعات کاری: ۲۴ ساعته، ۷ روز هفته</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                            <h4 class="font-bold mb-2 text-center">عضویت در کانال تلگرام</h4>
+                            <p class="text-sm text-gray-600 mb-3 text-center">برای دریافت آخرین اخبار، تخفیف‌ها و آموزش‌های کاربردی</p>
+                            <a href="https://t.me/vpnsamantel" target="_blank" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition flex items-center justify-center">
+                                <svg class="h-5 w-5 ml-2" viewBox="0 0 24 24" fill="white">
+                                    <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                                </svg>
+                                عضویت در کانال
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-6 bg-white">
+                        <h3 class="text-xl font-bold mb-4">ارسال پیام</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="name">نام</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="نام خود را وارد کنید">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="email">ایمیل</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="ایمیل خود را وارد کنید">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="message">پیام</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="پیام خود را بنویسید"></textarea>
+                            </div>
+                            <button type="button" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition" onclick="showPurchaseModal()">ارسال پیام</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telegram CTA Bottom -->
+    <section class="py-10 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center text-center">
+                <svg class="h-16 w-16 mb-4" viewBox="0 0 24 24" fill="white">
+                    <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                </svg>
+                <h2 class="text-3xl font-bold mb-4">به کانال تلگرام ما بپیوندید</h2>
+                <p class="text-xl mb-6 max-w-2xl">برای دریافت آخرین اخبار، تخفیف‌های ویژه و آموزش‌های کاربردی به کانال تلگرام ما بپیوندید</p>
+                <a href="https://t.me/vpnsamantel" target="_blank" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition shadow-lg flex items-center">
+                    <svg class="h-6 w-6 ml-2" viewBox="0 0 24 24" fill="#0088cc">
+                        <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                    </svg>
+                    @vpnsamantel
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="text-2xl font-bold mb-2">VPN<span class="text-yellow-300">Samantel</span></div>
+                    <p class="text-sm">سرویس V2Ray با بالاترین کیفیت و پشتیبانی حرفه‌ای</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#" class="hover:text-yellow-300 transition">صفحه اصلی</a>
+                    <a href="#features" class="hover:text-yellow-300 transition">ویژگی‌ها</a>
+                    <a href="#plans" class="hover:text-yellow-300 transition">پلن‌ها</a>
+                    <a href="#faq" class="hover:text-yellow-300 transition">سوالات متداول</a>
+                    <a href="#contact" class="hover:text-yellow-300 transition">تماس با ما</a>
+                    <a href="https://t.me/vpnsamantel" target="_blank" class="hover:text-yellow-300 transition flex items-center">
+                        <svg class="h-4 w-4 ml-1" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                        </svg>
+                        کانال تلگرام
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 mt-6 pt-6 text-center text-sm">
+                <p>© ۱۴۰۲ VPN Samantel - تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('svg');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+        
+        // Mobile menu toggle
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            if (nav.classList.contains('hidden')) {
+                nav.classList.remove('hidden');
+                nav.classList.add('flex', 'flex-col', 'absolute', 'top-16', 'right-0', 'left-0', 'bg-indigo-600', 'p-4', 'z-50');
+            } else {
+                nav.classList.add('hidden');
+                nav.classList.remove('flex', 'flex-col', 'absolute', 'top-16', 'right-0', 'left-0', 'bg-indigo-600', 'p-4', 'z-50');
+            }
+        });
+        
+        // Purchase modal functions
+        function showPurchaseModal() {
+            document.getElementById('purchaseModal').style.display = 'block';
+        }
+        
+        function closePurchaseModal() {
+            document.getElementById('purchaseModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('purchaseModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>3
